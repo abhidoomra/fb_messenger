@@ -1,0 +1,16 @@
+.message__card{
+     padding: 10px;
+     margin:10px;
+     width:fit-content;
+     border-bottom-left-radius: 30px !important;
+     border-top-left-radius: 30px !important;
+     border-top-right-radius: 30px !important;
+}
+.message__card-user{
+    margin-left:auto;
+    text-align: left !important;
+    background: linear-gradient(to right top, skyblue, rgb(212, 123, 247),rgb(247,123,123)) !important;
+}
+.message__card-guest{
+    background-color: #e9c9eb !important;
+}
