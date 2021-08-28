@@ -3,11 +3,28 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Message from './Message';
 import SendIcon from '@material-ui/icons/Send';
+import db from './firebase';
+
 
 function App() {
   //storing username and set username
   const [username, setUsername] = useState('');
   //calling on loading page and ask for user
+  useEffect(() => {
+    // run once when app loads
+    //snapshot run every single time dataabase take change pic
+    db.collection('messages').onSnapshot(snapshot => {
+      setMessages(snapshot.docs.map(doc => doc.data()));
+    })
+  }, [])
+
+  // useEffect(() => {
+  //   //when app.js loads
+  //   db.collection('messages').onSnapshot(snapshot => {
+  //     setMessages()
+  //   })
+  // }, [])
+
   useEffect(() => {
     setUsername(prompt("Enter username: "))
   }, [])
@@ -19,7 +36,11 @@ function App() {
 
   const sendMessage = (event) => {
     event.preventDefault();
-    setMessages([...messages, { username: username, text: input }]);
+    db.collection('messages').add({
+      text: input,
+      username: username
+    })
+    // setMessages([...messages, { username: username, text: input }]);
     setInput('');
   }
   return (
