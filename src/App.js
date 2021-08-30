@@ -4,6 +4,7 @@ import './App.css';
 import Message from './Message';
 import SendIcon from '@material-ui/icons/Send';
 import db from './firebase';
+import firebase from 'firebase';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
   useEffect(() => {
     // run once when app loads
     //snapshot run every single time dataabase take change pic
-    db.collection('messages').onSnapshot(snapshot => {
+    db.collection('messages').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
       setMessages(snapshot.docs.map(doc => doc.data()));
     })
   }, [])
@@ -38,7 +39,8 @@ function App() {
     event.preventDefault();
     db.collection('messages').add({
       text: input,
-      username: username
+      username: username,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
     })
     // setMessages([...messages, { username: username, text: input }]);
     setInput('');

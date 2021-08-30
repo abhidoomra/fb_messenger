@@ -10,7 +10,7 @@ function Message({ username, text }) {
             <CardContent>
                 {/* variant make it appear h5 but component make html element of h2 */}
                 <Typography color="white" variant="h5" component="h2" >
-                    {text.username}: {text.text}
+                    {!user && `${text.username || `Unknown User`}: `} {text.text}
                 </Typography>
             </CardContent>
         </Card>
