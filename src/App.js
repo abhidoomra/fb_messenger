@@ -5,6 +5,7 @@ import Message from './Message';
 import SendIcon from '@material-ui/icons/Send';
 import db from './firebase';
 import firebase from 'firebase';
+import FlipMove from 'react-flip-move';
 
 
 function App() {
@@ -15,9 +16,10 @@ function App() {
     // run once when app loads
     //snapshot run every single time dataabase take change pic
     db.collection('messages').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
-      setMessages(snapshot.docs.map(doc => doc.data()));
+      setMessages(snapshot.docs.map(doc => ({ id: doc.id, message: doc.data() })));
     })
   }, [])
+  // id to have key and render only key elemnet not all
 
   // useEffect(() => {
   //   //when app.js loads
@@ -58,10 +60,13 @@ function App() {
           {/* icon button wrap sendicon and make it as button */}
         </FormControl>
       </form>
-      {
-        // prompt username is passed and whole object message is passed.
-        messages.map(message => (<Message username={username} text={message} />))
-      }
+      <FlipMove>
+        {
+          // prompt username is passed and whole object message is passed.
+          messages.map(({ id, message }) => (<Message key={id} username={username} text={message} />))
+          // key is to render only new value not old
+        }
+      </FlipMove>
     </div>
   );
 }
