@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/fb_messenger/static/css/main.b07f09c3.chunk.css",
-    "main.js": "/fb_messenger/static/js/main.cef7b35a.chunk.js",
-    "main.js.map": "/fb_messenger/static/js/main.cef7b35a.chunk.js.map",
-    "runtime-main.js": "/fb_messenger/static/js/runtime-main.8b2b5273.js",
-    "runtime-main.js.map": "/fb_messenger/static/js/runtime-main.8b2b5273.js.map",
-    "static/js/2.8964b685.chunk.js": "/fb_messenger/static/js/2.8964b685.chunk.js",
-    "static/js/2.8964b685.chunk.js.map": "/fb_messenger/static/js/2.8964b685.chunk.js.map",
-    "static/js/3.ae32d1dc.chunk.js": "/fb_messenger/static/js/3.ae32d1dc.chunk.js",
-    "static/js/3.ae32d1dc.chunk.js.map": "/fb_messenger/static/js/3.ae32d1dc.chunk.js.map",
+    "main.css": "/fb_messenger/static/css/main.6614c676.chunk.css",
+    "main.js": "/fb_messenger/static/js/main.a841ec97.chunk.js",
+    "main.js.map": "/fb_messenger/static/js/main.a841ec97.chunk.js.map",
+    "runtime-main.js": "/fb_messenger/static/js/runtime-main.14d5b126.js",
+    "runtime-main.js.map": "/fb_messenger/static/js/runtime-main.14d5b126.js.map",
+    "static/js/2.0b202462.chunk.js": "/fb_messenger/static/js/2.0b202462.chunk.js",
+    "static/js/2.0b202462.chunk.js.map": "/fb_messenger/static/js/2.0b202462.chunk.js.map",
+    "static/js/3.e5915a02.chunk.js": "/fb_messenger/static/js/3.e5915a02.chunk.js",
+    "static/js/3.e5915a02.chunk.js.map": "/fb_messenger/static/js/3.e5915a02.chunk.js.map",
     "index.html": "/fb_messenger/index.html",
-    "static/css/main.b07f09c3.chunk.css.map": "/fb_messenger/static/css/main.b07f09c3.chunk.css.map",
-    "static/js/2.8964b685.chunk.js.LICENSE.txt": "/fb_messenger/static/js/2.8964b685.chunk.js.LICENSE.txt"
+    "static/css/main.6614c676.chunk.css.map": "/fb_messenger/static/css/main.6614c676.chunk.css.map",
+    "static/js/2.0b202462.chunk.js.LICENSE.txt": "/fb_messenger/static/js/2.0b202462.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8b2b5273.js",
-    "static/js/2.8964b685.chunk.js",
-    "static/css/main.b07f09c3.chunk.css",
-    "static/js/main.cef7b35a.chunk.js"
+    "static/js/runtime-main.14d5b126.js",
+    "static/js/2.0b202462.chunk.js",
+    "static/css/main.6614c676.chunk.css",
+    "static/js/main.a841ec97.chunk.js"
   ]
 }
