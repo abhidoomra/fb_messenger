@@ -1,5 +1,33 @@
+
 .App {
   text-align: center;
+  color:#ffffff;
+  background: rgb(69, 69, 143);
+
+  /* display:flex impot !important;
+  flex-direction: column !important; */
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.app__header
+{
+  width:100%;
+  margin:0;
+  position:fixed;
+  top:0;
+  height:120px;
+  color:#ffffff;
+  background: rgb(69, 69, 143);
+  z-index: 1;
+}
+.app__messageContainer
+{
+  background-color: #ffffff;
+ margin-top: 125px;
+ /* height: 85%; */
+ margin-bottom: 95px;
 }
 
 .app__form{
@@ -7,18 +35,29 @@
   padding:20px;
   position:fixed;
   bottom:0;
-  background-color: #e9e9eb;
-  width:95%;
-  margin:20px;
+  background: rgb(69, 69, 143);
+  width:100%;
   z-index: 1;
+  height:50px;
 }
 
 .app__formcontrol{
   display:flex !important;
   flex-direction: row !important;
+  background-color: #ffffff;
+  border-radius: 999px;
+  transform: translateX(-20px);
 }
+
 .app__input{
-  flex:1;
+  flex:1 !important;
+  padding-left: 2rem;
+  font-size: large;
+  border-radius: 999px;
+  border:1px solid #fff;
+}
+.app__input:focus{
+outline:none;
 }
 .app__iconbutton{
   flex:0;
